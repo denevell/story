@@ -3,7 +3,7 @@ lex
 
 lex is a small toy language collaboration project
 
-Thoughts
+thoughts
 ========
 
 - shall we get a 'hello world' running first? -a
