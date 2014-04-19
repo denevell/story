@@ -5,14 +5,20 @@
 # $< means the dependency, like if story.c, for example
 
 OBJS=story.o
+LEX_OUTPUT=lex.yy.c
+COMPILER_FLAGS=-lfl
 PROG=story
+PROG_INPUT=story_input
 LIBS=
 
-all:$(OBJS)
-	gcc -o $(PROG) $(LIBS) $(OBJS)
+all: lex compile
+	./$(PROG) < $(PROG_INPUT)
 
-%o:%c 
-	gcc -c $<
+compile: lex 
+	cc -o $(PROG) $(LEX_OUTPUT) $(COMPILER_FLAGS)
+
+lex: story.l
+	lex story.l
 
 clean:
 	rm -rf $(PROG) $(OBJS)
