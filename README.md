@@ -1,7 +1,7 @@
-lex
-===
+Story
+=====
 
-lex is a small toy language collaboration project
+Story is a toy language for writing interactive text adventures.
 
 thoughts
 ========
