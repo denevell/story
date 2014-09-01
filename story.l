@@ -10,6 +10,13 @@ oxyhaemaglobin {ECHO; what++;}
 
 int main() 
 {
+	FILE *myfile = fopen("story_input", "r");
+	if (!myfile) {
+		printf("Couldn't open story_input!\n"); 
+		return -1;
+	}
+	yyin = myfile;
+
 	printf("====== BEGIN ====\n"); 
 	yylex();
 	printf("====== END ====\n"); 

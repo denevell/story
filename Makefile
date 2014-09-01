@@ -12,7 +12,7 @@ PROG_INPUT=story_input
 LIBS=
 
 all: lex compile
-	./$(PROG) < $(PROG_INPUT)
+	./$(PROG)
 
 compile: lex 
 	cc -o $(PROG) $(LEX_OUTPUT) $(COMPILER_FLAGS)
